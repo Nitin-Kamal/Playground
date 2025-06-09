@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(230, 230, 115);
+  margin-left: 1000px;
+  transition: 1s;
+  filter: blur(20px);
+}
+.navdiv {
+  background: yellowgreen;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  cursor: unset;
+}
+.navcon {
+  display: flex;
+  max-width: fit-content;
+}
+.navc {
+  font-size: large;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.navc:hover {
+  color: brown;
+}
+.home {
+  margin-left: 40px;
+}
+.indicator {
+  width: 15px;
+  height: 8px;
+  border-radius: 5px;
+  background: black;
+  margin-top: -17px;
+  margin-left: 58px;
+  transition: 0.7s;
+  display: flex;
+}
+.navdivmob {
+  margin-top: 5px;
+  width: 0px;
+  height: 270px;
+  background: yellowgreen;
+  transition: 0.6s;
+}
+.mobmenu {
+  width: 30px;
+  height: 30px;
+  display: none;
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 4px;
+  background: white;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+.mobmenu:hover {
+  filter: brightness(85%);
+}
+.navconmobile {
+  display: grid;
+  max-width: fit-content;
+}
+.navcm {
+  font-size: large;
+  text-decoration: none;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  transition: 0.3s;
+  margin-left: 30px;
+  display: none;
+}
+.navcm:hover {
+  color: brown;
+}
+.homem {
+  margin-top: 28px;
+}

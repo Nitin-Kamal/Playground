@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js"></script>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Homepage</title>
+    <div class="navdiv" id="navdiv">
+      <li class="navcon" id="navcon">
+        <ul class="navcon">
+          <a href="#" class="navc home" id="home" onclick="homeind()">Home</a>
+          <a href="#" class="navc" id="dm1" onclick="dm1ind()">dummy1</a>
+          <a href="#" class="navc" id="dm2" onclick="dm2ind()">dummy2</a>
+          <a href="#" class="navc" id="dm3" onclick="dm3ind()">dummy3</a>
+          <a href="#" class="navc" id="dm4" onclick="dm4ind()">dummy4</a>
+        </ul>
+      </li>
+      <div class="indicator" id="indicator"></div>
+      <img src="menu.svg" class="mobmenu" id="mobmenu" onclick="mobmenu()">
+      <div class="navdivmob" id="navdivmob">
+        <li class="navconmobile" id="navconmobile">
+          <ul class="navconmobile">
+            <a href="#" class="navcm homem" id="homem" onclick="homeind()">Home</p><br>
+            <a href="#" class="navcm" id="dm1m" onclick="dm1ind()">dummy1</p><br>
+            <a href="#" class="navcm" id="dm2m" onclick="dm2ind()">dummy2</p><br>
+            <a href="#" class="navcm" id="dm3m" onclick="dm3ind()">dummy3</p><br>
+            <a href="#" class="navcm" id="dm4m" onclick="dm4ind()">dummy4</p>
+          </ul>
+        </li>
+      </div>
+    </div>
   </head>
-  <body>
-    <div class="navbar"></div>
+  <body id="body" onload="loadup()">
   </body>
+  <script src="scripts.js"></script>
 </html>
