@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <div class="navdiv" id="navdiv">
-      <li class="navcon" id="navcon">
-        <ul class="navcon">
-          <a href="#" class="navc home" id="home" onclick="homeind()">Home</a>
-          <a href="#" class="navc" id="dm1" onclick="dm1ind()">dummy1</a>
-          <a href="#" class="navc" id="dm2" onclick="dm2ind()">dummy2</a>
-          <a href="#" class="navc" id="dm3" onclick="dm3ind()">dummy3</a>
-          <a href="#" class="navc" id="dm4" onclick="dm4ind()">dummy4</a>
-        </ul>
-      </li>
-      <div class="indicator" id="indicator"></div>
-      <img src="menu.svg" class="mobmenu" id="mobmenu" onclick="mobmenu()">
-      <div class="navdivmob" id="navdivmob">
-        <li class="navconmobile" id="navconmobile">
-          <ul class="navconmobile">
-            <a href="#" class="navcm homem" id="homem" onclick="homeind()">Home</p><br>
-            <a href="#" class="navcm" id="dm1m" onclick="dm1ind()">dummy1</a><br>
-            <a href="#" class="navcm" id="dm2m" onclick="dm2ind()">dummy2</a><br>
-            <a href="#" class="navcm" id="dm3m" onclick="dm3ind()">dummy3</a><br>
-            <a href="#" class="navcm" id="dm4m" onclick="dm4ind()">dummy4</a>
-          </ul>
-        </li>
-      </div>
+    <div class="navbar" id="navbar">
+        <img src="temp-background.jpg" alt="" class="logo">
+        <div class="navind" id="navind"></div>
+        <p class="d1" id="d1" onclick="dum1()">Dummy</p>
+        <p class="d2" id="d2" onclick="dum2()">Dummy</p>
+        <p class="d3" id="d3" onclick="dum3()">Dummy</p>
+        <p class="d4" id="d4" onclick="dum4()">Dummy</p>
+        <img src="temp-background.jpg" alt="" class="account">
     </div>
-  </head>
-  <body id="body" onload="loadup()">
-  </body>
-  <script src="scripts.js"></script>
+</head>
+<body id="body">
+
+</body>
+<script src="scripts.js"></script>
+<script src="three.r134.min.js"></script>
+<script src="vanta.fog.min.js"></script>
+<script>
+VANTA.FOG({
+  el: document.getElementById('body'),
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0x6700ff,
+  midtoneColor: 0x0,
+  lowlightColor: 0x0,
+  baseColor: 0x0,
+  blurFactor: 0.60,
+  speed: 2
+})
+</script>
 </html>
