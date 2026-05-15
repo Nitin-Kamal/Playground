@@ -9,6 +9,16 @@ setInterval(() => {
   }
 }, 10);
 
+function on_load() {
+  let x = document.getElementById('navbar');
+  let y = window.innerWidth;
+  x.style.width = (0.8789*y) + 'px';
+  x.style.left = (0.0586*y) + 'px';
+  let z = window.innerHeight;
+  let menu_cont = document.getElementById('menu-container');
+  menu_cont.style.height = (z-4) + 'px';
+}
+
 setInterval(() => {
   let x = document.getElementById("navbar");
   let y = window.innerWidth;
@@ -45,7 +55,7 @@ setInterval(() => {
     d4.style.display = 'none';
     navind.style.display = 'none';
   }
-}, 10);
+}, 0);
 
 setInterval(() => {
   let scrollvalue1 = window.scrollY;
@@ -114,8 +124,7 @@ function anim_switch() {
   let y = document.getElementById('anim-switch');
   let z = document.getElementById('anim-switch-container');
   x.setAttribute('id', 'body1');
-  y.style.left = 'initial';
-  y.style.right = '3px';
+  y.style.left = '37px';
   y.style.background = 'green';
   z.setAttribute('onclick', 'anim_switch_1()');
   VANTA.FOG({
@@ -141,40 +150,79 @@ function anim_switch_1() {
 
 function menu_open() {
   let x = document.getElementById('menu-container');
-  let y = document.getElementById('close-button');
   let inner_width = window.innerWidth;
+  let inner_height =  window.innerHeight;
+  x.style.height = (inner_height-4) + 'px';
 
   if (inner_width >= 355) {
     x.style.left = 0;
   } else {
     x.style.width = (inner_width-2) + 'px';
     x.style.left = 0;
-    y.style.left = ((0.8428*inner_width)-2) + 'px';
   }
 }
 
 function menu_close() {
   let x = document.getElementById('menu-container');
-  x.style.left = '-352px';
+  x.style.left = '-360px';
 }
 
 function dum1m() {
   window.scrollTo({ top: 1080, behavior: "smooth" });
   let x = document.getElementById('menu-container');
-  x.style.left = '-352px';
+  x.style.left = '-360px';
 }
 function dum2m() {
   window.scrollTo({ top: 2160, behavior: "smooth" });
   let x = document.getElementById('menu-container');
-  x.style.left = '-352px';
+  x.style.left = '-360px';
 }
 function dum3m() {
   window.scrollTo({ top: 3240, behavior: "smooth" });
   let x = document.getElementById('menu-container');
-  x.style.left = '-352px';
+  x.style.left = '-360px';
 }
 function dum4m() {
   window.scrollTo({ top: 4320, behavior: "smooth" });
   let x = document.getElementById('menu-container');
-  x.style.left = '-352px';
+  x.style.left = '-360px';
+}
+
+function acc_open() {
+  let acc_center = document.getElementById('acc-center');
+  let a1 = document.getElementById('a1');
+  let a2 = document.getElementById('a2');
+  let a3 = document.getElementById('a3');
+  let a4 = document.getElementById('a4');
+  let anim_switch_cont = document.getElementById('anim-switch-container');
+  let account = document.getElementById('account');
+
+  acc_center.style.height = '285px';
+  acc_center.style.display = 'initial'
+  a1.style.display = 'initial';
+  a2.style.display = 'initial';
+  a3.style.display = 'initial';
+  a4.style.display = 'initial';
+  anim_switch_cont.style.display = 'initial';
+
+  account.setAttribute('onclick', 'acc_close()');
+}
+function acc_close() {
+  let acc_center = document.getElementById('acc-center');
+  let a1 = document.getElementById('a1');
+  let a2 = document.getElementById('a2');
+  let a3 = document.getElementById('a3');
+  let a4 = document.getElementById('a4');
+  let anim_switch_cont = document.getElementById('anim-switch-container');
+  let account = document.getElementById('account');
+
+  acc_center.style.height = 0;
+  acc_center.style.display = 'none';
+  a1.style.display = 'none';
+  a2.style.display = 'none';
+  a3.style.display = 'none';
+  a4.style.display = 'none';
+  anim_switch_cont.style.display = 'none';
+
+  account.setAttribute('onclick', 'acc_open()');
 }

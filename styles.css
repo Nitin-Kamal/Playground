@@ -3,10 +3,11 @@
   padding: 0;
 }
 body {
-  background-color: rgb(36, 0, 88);
+  background: rgb(36, 0, 88);
   height: 10000px;
 }
 .navbar {
+  width: 0;
   position: absolute;
   height: 55px;
   left: 90px;
@@ -112,17 +113,16 @@ body {
   position: fixed;
   width: 50px;
   height: 25px;
-  right: 63px;
-  top: 15px;
+  left: 10px;
+  top: 250px;
   border-radius: 15px;
-  border: 1px solid grey;
-  background: grey;
-  filter: opacity(40%);
+  border: 1px solid white;
   cursor: pointer;
   transition: 0.5s;
+  display: none;
 }
 .anim-switch-container:hover {
-  border: 1px solid white;
+  border: 1px solid grey;
 }
 .anim-switch {
   position: fixed;
@@ -130,8 +130,8 @@ body {
   height: 21px;
   background: red;
   border-radius: 50%;
-  left: 3px;
-  top: 2px;
+  top: 253px;
+  left: 13px;
   transition: 0.5s;
   filter: opacity(100%);
 }
@@ -161,7 +161,7 @@ body {
   border: 2px solid grey;
   border-left: none;
   backdrop-filter: blur(10px);
-  left: -352px;
+  left: -360px;
   transition: 0.5s;
 }
 .d1m {
@@ -223,9 +223,129 @@ body {
   backdrop-filter: opacity(40%);
   transition: 0.5s;
   cursor: pointer;
-  left: 295px;
+  right: 7px;
   top: 6px;
 }
 .close-button:hover {
   border: 2px solid white;
+}
+.acc-center {
+  position: fixed;
+  width: 230px;
+  height: 0px;
+  right: 4px;
+  top: 70px;
+  border-radius: 20px;
+  border: 2px solid grey;
+  backdrop-filter: blur(10px);
+  display: none;
+  transition: 0.5s;
+}
+.a1 {
+  position: fixed;
+  width: 210px;
+  height: 50px;
+  left: 10px;
+  top: 10px;
+  border-radius: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.5s;
+  display: none;
+}
+.a2 {
+  position: fixed;
+  width: 210px;
+  height: 50px;
+  left: 10px;
+  top: 70px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.5s;
+  display: none;
+}
+.a3 {
+  position: fixed;
+  width: 210px;
+  height: 50px;
+  left: 10px;
+  top: 130px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.5s;
+  display: 'none';
+}
+.a4 {
+  position: fixed;
+  width: 210px;
+  height: 50px;
+  left: 10px;
+  top: 190px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.5s;
+  display: none;
+}
+.at1 {
+  position: fixed;
+  font-size: 20px;
+  color: white;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  top: 20px;
+  left: 80px;
+}
+.at2 {
+  position: fixed;
+  font-size: 20px;
+  color: white;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  top: 80px;
+  left: 80px;
+}
+.at3 {
+  position: fixed;
+  font-size: 20px;
+  color: white;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  top: 140px;
+  left: 80px;
+}
+.at4 {
+  position: fixed;
+  font-size: 20px;
+  color: white;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  top: 200px;
+  left: 80px;
+}
+.a1:hover {
+  border: 3px solid grey;
+  top: 8px;
+  left: 8px;
+}
+.a2:hover {
+  border: 3px solid grey;
+  top: 68px;
+  left: 8px;
+}
+.a3:hover {
+  border: 3px solid grey;
+  top: 128px;
+  left: 8px;
+}
+.a4:hover {
+  border: 3px solid grey;
+  top: 188px;
+  left: 8px;
 }
