@@ -1,104 +1,231 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background: url(temp-background.jpg);
-    height: 10000px;
+  background-color: rgb(36, 0, 88);
+  height: 10000px;
 }
 .navbar {
-    position: absolute;
-    height: 55px;
-    left: 90px;
-    top: 10px;
-    border: 1px solid grey;
-    border-radius: 20px;
-    backdrop-filter: blur(20px) saturate(150%);
-    transition: 0.5s;
+  position: absolute;
+  height: 55px;
+  left: 90px;
+  top: 10px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  backdrop-filter: blur(10px) saturate(150%);
+  transition: 0.5s;
 }
 .logo {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    top: 6px;
-    left: 10px;
-    border-radius: 50%;
-    border: 2px solid grey;
-    transition: 0.5s;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 6px;
+  left: 10px;
+  border-radius: 50%;
+  border: 2px solid grey;
+  transition: 0.5s;
 }
 .account {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    top: 6px;
-    right: 10px;
-    border: 2px solid grey;
-    border-radius: 50%;
-    transition: 0.5s;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 6px;
+  right: 10px;
+  border: 2px solid grey;
+  border-radius: 50%;
+  transition: 0.5s;
 }
 .account:hover {
-    border: 2px solid white;
-    cursor: pointer;
+  border: 2px solid white;
+  cursor: pointer;
 }
 .d1 {
-    position: fixed;
-    left: 350px;
-    top: 13px;
-    font-size: 20px;
-    color: grey;
-    transition: 0.5s;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    cursor: pointer;
+  position: fixed;
+  left: 350px;
+  top: 13px;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
 }
 .d2 {
-    position: fixed;
-    left: 520px;
-    top: 13px;
-    font-size: 20px;
-    color: grey;
-    transition: 0.5s;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    cursor: pointer;
+  position: fixed;
+  left: 520px;
+  top: 13px;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
 }
 .d3 {
-    position: fixed;
-    left: 690px;
-    top: 13px;
-    font-size: 20px;
-    color: grey;
-    transition: 0.5s;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    cursor: pointer;
+  position: fixed;
+  left: 690px;
+  top: 13px;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
 }
 .d4 {
-    position: fixed;
-    left: 860px;
-    top: 13px;
-    font-size: 20px;
-    color: grey;
-    transition: 0.5s;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    cursor: pointer;
+  position: fixed;
+  left: 860px;
+  top: 13px;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
 }
-.d1:hover, .d2:hover, .d3:hover, .d4:hover {
-    color: white;
+.d1:hover,
+.d2:hover,
+.d3:hover,
+.d4:hover {
+  color: white;
 }
-.ad1, .ad2, .ad3, .ad4 {
-    text-decoration: none;
+.ad1,
+.ad2,
+.ad3,
+.ad4 {
+  text-decoration: none;
 }
 .navind {
-    position: fixed;
-    width: 80px;
-    height: 7px;
-    top: 40px;
-    left: 345px;
-    border-radius: 5px;
-    transition: 0.8s;
-    background: grey;
-    filter: opacity(40%);
-    border: 1px solid white;
+  position: fixed;
+  width: 80px;
+  height: 7px;
+  top: 40px;
+  left: 345px;
+  border-radius: 5px;
+  transition: 0.8s;
+  background: grey;
+  filter: opacity(40%);
+  border: 1px solid white;
+}
+.anim-switch-container {
+  position: fixed;
+  width: 50px;
+  height: 25px;
+  right: 63px;
+  top: 15px;
+  border-radius: 15px;
+  border: 1px solid grey;
+  background: grey;
+  filter: opacity(40%);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.anim-switch-container:hover {
+  border: 1px solid white;
+}
+.anim-switch {
+  position: fixed;
+  width: 21px;
+  height: 21px;
+  background: red;
+  border-radius: 50%;
+  left: 3px;
+  top: 2px;
+  transition: 0.5s;
+  filter: opacity(100%);
+}
+.menu-button {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border: 2px solid grey;
+  top: 4px;
+  left: 4px;
+  border-radius: 15px;
+  backdrop-filter: opacity(40%);
+  transition: 0.5s;
+  cursor: pointer;
+  display: none;
+}
+.menu-button:hover {
+  border: 2px solid white;
+}
+.menu-container {
+  position: fixed;
+  width: 350px;
+  height: 695px;
+  top: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 2px solid grey;
+  border-left: none;
+  backdrop-filter: blur(10px);
+  left: -352px;
+  transition: 0.5s;
+}
+.d1m {
+  position: fixed;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  top: 70px;
+  left: 50px;
+}
+.d2m {
+  position: fixed;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  top: 130px;
+  left: 50px;
+}
+.d3m {
+  position: fixed;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  top: 190px;
+  left: 50px;
+}
+.d4m {
+  position: fixed;
+  font-size: 20px;
+  color: grey;
+  transition: 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  top: 250px;
+  left: 50px;
+}
+.d1m:hover,
+.d2m:hover,
+.d3m:hover,
+.d4m:hover {
+  color: white;
+}
+.close-button {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  backdrop-filter: opacity(40%);
+  transition: 0.5s;
+  cursor: pointer;
+  left: 295px;
+  top: 6px;
+}
+.close-button:hover {
+  border: 2px solid white;
 }

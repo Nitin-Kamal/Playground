@@ -1,40 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <div class="navbar" id="navbar">
-        <img src="temp-background.jpg" alt="" class="logo">
-        <div class="navind" id="navind"></div>
-        <p class="d1" id="d1" onclick="dum1()">Dummy</p>
-        <p class="d2" id="d2" onclick="dum2()">Dummy</p>
-        <p class="d3" id="d3" onclick="dum3()">Dummy</p>
-        <p class="d4" id="d4" onclick="dum4()">Dummy</p>
-        <img src="temp-background.jpg" alt="" class="account">
+      <img src="temp-background.jpg" alt="" class="logo" id="logo">
+      <div class="navind" id="navind"></div>
+      <div class="menu-button" id="menu-button" onclick="menu_open()">
+        <img src="menu.svg" alt="" id="menu-svg" class="menu-svg">
+      </div>
+      <p class="d1" id="d1" onclick="dum1()">Dummy</p>
+      <p class="d2" id="d2" onclick="dum2()">Dummy</p>
+      <p class="d3" id="d3" onclick="dum3()">Dummy</p>
+      <p class="d4" id="d4" onclick="dum4()">Dummy</p>
+      <div class="anim-switch-container" id="anim-switch-container" onclick="anim_switch()">
+        <div class="anim-switch" id="anim-switch"></div>
+      </div>
+      <img src="temp-background.jpg" alt="" class="account" />
     </div>
-</head>
-<body id="body">
-
-</body>
-<script src="scripts.js"></script>
-<script src="three.r134.min.js"></script>
-<script src="vanta.fog.min.js"></script>
-<script>
-VANTA.FOG({
-  el: document.getElementById('body'),
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  highlightColor: 0x6700ff,
-  midtoneColor: 0x0,
-  lowlightColor: 0x0,
-  baseColor: 0x0,
-  blurFactor: 0.60,
-  speed: 2
-})
-</script>
+    <div class="menu-container" id="menu-container">
+      <div class="close-button" id="close-button" onclick="menu_close()">
+        <img src="close.svg" alt="" id="close-svg" class="close-svg">
+      </div>
+      <p class="d1m" id="d1m" onclick="dum1m()">Dummy</p>
+      <p class="d2m" id="d2m" onclick="dum2m()">Dummy</p>
+      <p class="d3m" id="d3m" onclick="dum3m()">Dummy</p>
+      <p class="d4m" id="d4m" onclick="dum4m()">Dummy</p>
+    </div>
+  </head>
+  <body id="body"></body>
+  <script src="scripts.js"></script>
+  <script src="three.r134.min.js"></script>
+  <script src="vanta.fog.min.js"></script>
 </html>
