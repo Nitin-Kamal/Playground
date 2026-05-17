@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
+    <div class="fake-body" id="fake-body"></div>
     <div class="navbar" id="navbar">
       <img src="temp-background.jpg" alt="" class="logo" id="logo">
       <div class="navind" id="navind"></div>
@@ -15,7 +16,22 @@
       <p class="d2" id="d2" onclick="dum2()">Dummy</p>
       <p class="d3" id="d3" onclick="dum3()">Dummy</p>
       <p class="d4" id="d4" onclick="dum4()">Dummy</p>
-      <img src="temp-background.jpg" alt="" class="account" onclick="acc_open()" id="account"/>
+      <div class="acc-hint" id="acc-hint">
+        <p class="acc-hint-t" id="acc-hint-t">></p>
+      </div>
+      <img src="temp-background.jpg" alt="" class="account" onclick="acc_open()" id="account" onmouseover="acc_hover()" onmouseleave="acc_leave()">
+    </div>
+    <div class="acc-center" id="acc-center">
+      <div class="a1" id="a1" onclick="acc_close()"><p class="at1" id="at1">Dummy</p></div>
+      <div class="a2" id="a2" onclick="acc_close()"><p class="at2" id="at2">Dummy</p></div>
+      <div class="a3" id="a3" onclick="acc_close()"><p class="at3" id="at3">Dummy</p></div>
+      <div class="a4" id="a4" onclick="acc_close()"><p class="at4" id="at4">Dummy</p></div>
+      <div class="anim-switch-container" id="anim-switch-container" onclick="anim_switch_dark()">
+        <div class="anim-switch" id="anim-switch"></div>
+      </div>
+      <div class="mode-switch-container" id="mode-switch-container" onclick="mode_switch()">
+        <div class="mode-switch" id="mode-switch"></div>
+      </div>
     </div>
     <div class="menu-container" id="menu-container">
       <div class="close-button" id="close-button" onclick="menu_close()">
@@ -26,18 +42,10 @@
       <p class="d3m" id="d3m" onclick="dum3m()">Dummy</p>
       <p class="d4m" id="d4m" onclick="dum4m()">Dummy</p>
     </div>
-    <div class="acc-center" id="acc-center">
-      <div class="a1" id="a1" onclick="acc_close()"><p class="at1" id="at1">Dummy</p></div>
-      <div class="a2" id="a2" onclick="acc_close()"><p class="at2" id="at2">Dummy</p></div>
-      <div class="a3" id="a3" onclick="acc_close()"><p class="at3" id="at3">Dummy</p></div>
-      <div class="a4" id="a4" onclick="acc_close()"><p class="at4" id="at4">Dummy</p></div>
-      <div class="anim-switch-container" id="anim-switch-container" onclick="anim_switch()">
-        <div class="anim-switch" id="anim-switch"></div>
-      </div>
-    </div>
   </head>
   <body id="body" onload="on_load()"></body>
   <script src="scripts.js"></script>
   <script src="three.r134.min.js"></script>
   <script src="vanta.fog.min.js"></script>
+  <script src="vanta.clouds.min.js"></script>
 </html>

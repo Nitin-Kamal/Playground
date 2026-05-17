@@ -6,6 +6,9 @@ body {
   background: rgb(36, 0, 88);
   height: 10000px;
 }
+.fake-body {
+  position: fixed;
+}
 .navbar {
   width: 0;
   position: absolute;
@@ -232,14 +235,14 @@ body {
 .acc-center {
   position: fixed;
   width: 230px;
-  height: 0px;
+  height: 285px;
   right: 4px;
   top: 70px;
   border-radius: 20px;
   border: 2px solid grey;
   backdrop-filter: blur(10px);
-  display: none;
   transition: 0.5s;
+  display: none;
 }
 .a1 {
   position: fixed;
@@ -275,7 +278,7 @@ body {
   cursor: pointer;
   border: 1px solid white;
   transition: 0.5s;
-  display: 'none';
+  display: none;
 }
 .a4 {
   position: fixed;
@@ -348,4 +351,44 @@ body {
   border: 3px solid grey;
   top: 188px;
   left: 8px;
+}
+.acc-hint {
+  position: fixed;
+  width: 23px;
+  height: 30px;
+  backdrop-filter: blur(10px) saturate(150%);
+  border-radius: 10px;
+  right: 20px;
+  top: 30px;
+  border: 1px solid grey;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.acc-hint-t {
+  position: fixed;
+  top: 14px;
+  transform: rotate(90deg);
+  right: 7px;
+  color: white;
+}
+.mode-switch-container {
+  position: fixed;
+  width: 50px;
+  height: 25px;
+  left: 90px;
+  top: 250px;
+  border-radius: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.mode-switch {
+  position: fixed;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  top: 253px;
+  left: 118px;
+  transition: 0.5s;
+  border: 1px solid white;
 }

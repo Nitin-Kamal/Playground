@@ -17,6 +17,10 @@ function on_load() {
   let z = window.innerHeight;
   let menu_cont = document.getElementById('menu-container');
   menu_cont.style.height = (z-4) + 'px';
+
+  let fake_body = document.getElementById('fake-body');
+  fake_body.style.width = y + 'px';
+  fake_body.style.height = z + 'px';
 }
 
 setInterval(() => {
@@ -119,17 +123,15 @@ function dum4() {
 }
 
 
-function anim_switch() {
-  let x = document.getElementById('body');
+function anim_switch_dark() {
   let y = document.getElementById('anim-switch');
   let z = document.getElementById('anim-switch-container');
-  x.setAttribute('id', 'body1');
   y.style.left = '37px';
   y.style.background = 'green';
   z.setAttribute('onclick', 'anim_switch_1()');
   VANTA.FOG({
-      el: document.getElementById("body1"),
-      mouseControls: false,
+      el: document.getElementById("fake-body"),
+      mouseControls: true,
       touchControls: true,
       gyroControls: false,
       minHeight: 200.0,
@@ -141,11 +143,42 @@ function anim_switch() {
       blurFactor: 0.6,
       speed: 2,
     });
+  let fake_body = document.getElementById('fake-body');
+  fake_body.style.display = 'initial'
+}
+
+function anim_switch_light() {
+  let y = document.getElementById('anim-switch');
+  let z = document.getElementById('anim-switch-container');
+  y.style.left = '37px';
+  y.style.background = 'green';
+  z.setAttribute('onclick', 'anim_switch_1()');
+  VANTA.CLOUDS({
+      el: document.getElementById('fake-body'),
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00
+  });
+  let fake_body = document.getElementById('fake-body');
+  fake_body.style.display = 'initial'
 }
 
 function anim_switch_1() {
-  window.close();
-  window.open('index.html');
+  let fake_body = document.getElementById('fake-body');
+  fake_body.style.display = 'none';
+  let anim_switch = document.getElementById('anim-switch');
+  anim_switch.style.left = '13px';
+  anim_switch.style.background = 'red';
+  let anim_switch_container = document.getElementById('anim-switch-container');
+  let logo = document.getElementById('logo');
+  let logo_left = parseFloat(getComputedStyle(logo).left);
+  if (logo_left == 11) {
+    anim_switch_container.setAttribute('onclick', 'anim_switch_light()');
+  } else {
+    anim_switch_container.setAttribute('onclick', 'anim_switch_dark()');
+  }
 }
 
 function menu_open() {
@@ -153,6 +186,7 @@ function menu_open() {
   let inner_width = window.innerWidth;
   let inner_height =  window.innerHeight;
   x.style.height = (inner_height-4) + 'px';
+  let fake_body = document.getElementById('fake-body');
 
   if (inner_width >= 355) {
     x.style.left = 0;
@@ -160,11 +194,16 @@ function menu_open() {
     x.style.width = (inner_width-2) + 'px';
     x.style.left = 0;
   }
+
+  fake_body.setAttribute('onclick', 'menu_close()');
 }
 
 function menu_close() {
   let x = document.getElementById('menu-container');
   x.style.left = '-360px';
+  let fake_body = document.getElementById('fake-body');
+
+  fake_body.setAttribute('onclick', 'none');
 }
 
 function dum1m() {
@@ -196,6 +235,8 @@ function acc_open() {
   let a4 = document.getElementById('a4');
   let anim_switch_cont = document.getElementById('anim-switch-container');
   let account = document.getElementById('account');
+  let acc_hint = document.getElementById('acc-hint');
+  let fake_body = document.getElementById('fake-body');
 
   acc_center.style.height = '285px';
   acc_center.style.display = 'initial'
@@ -204,8 +245,10 @@ function acc_open() {
   a3.style.display = 'initial';
   a4.style.display = 'initial';
   anim_switch_cont.style.display = 'initial';
+  acc_hint.style.display = 'none';
 
   account.setAttribute('onclick', 'acc_close()');
+  fake_body.setAttribute('onclick', 'acc_close()')
 }
 function acc_close() {
   let acc_center = document.getElementById('acc-center');
@@ -215,6 +258,8 @@ function acc_close() {
   let a4 = document.getElementById('a4');
   let anim_switch_cont = document.getElementById('anim-switch-container');
   let account = document.getElementById('account');
+  let acc_hint = document.getElementById('acc-hint');
+  let fake_body = document.getElementById('fake-body');
 
   acc_center.style.height = 0;
   acc_center.style.display = 'none';
@@ -223,6 +268,116 @@ function acc_close() {
   a3.style.display = 'none';
   a4.style.display = 'none';
   anim_switch_cont.style.display = 'none';
+  acc_hint.style.display = 'initial';
 
   account.setAttribute('onclick', 'acc_open()');
+  fake_body.setAttribute('onclick', 'none');
+}
+function acc_hover() {
+  let acc_hint = document.getElementById('acc-hint');
+  acc_hint.style.border = '1px solid white';
+}
+function acc_leave() {
+  let acc_hint = document.getElementById('acc-hint');
+  acc_hint.style.border = '1px solid grey';
+}
+
+function mode_switch() {
+  let acc_center = document.getElementById('acc-center');
+  acc_center.style.border = '2px solid white';
+  let a1 = document.getElementById('a1');
+  a1.style.border = '1px solid grey';
+  let a2 = document.getElementById('a2');
+  a2.style.border = '1px solid grey';
+  let a3 = document.getElementById('a3');
+  a3.style.border = '1px solid grey';
+  let a4 = document.getElementById('a4');
+  a4.style.border = '1px solid grey';
+
+  let mode_switch_container = document.getElementById('mode-switch-container');
+  mode_switch_container.style.border = '1px solid grey';
+  mode_switch_container.setAttribute('onclick', 'mode_switch1()');
+  let mode_switch = document.getElementById('mode-switch');
+  mode_switch.style.left = '93px';
+
+  let anim_switch_container = document.getElementById('anim-switch-container');
+  anim_switch_container.style.border = '1px solid grey';
+
+  let anim_switch = document.getElementById('anim-switch');
+  let anim_switch_left = parseFloat(getComputedStyle(anim_switch).left);
+  if (anim_switch_left == 37) {
+    let fake_body = document.getElementById('fake-body');
+    fake_body.style.display = 'initial'
+    VANTA.CLOUDS({
+      el: document.getElementById('fake-body'),
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00
+    });
+    body = document.getElementById('body');
+    body.style.background = 'rgb(126, 204, 230)';
+    anim_switch_container.setAttribute('onclick', 'anim_switch_1()');
+  } else {
+    body = document.getElementById('body');
+    body.style.background = 'rgb(126, 204, 230)';
+    anim_switch_container.setAttribute('onclick', 'anim_switch_light()');
+  }
+
+  let logo = document.getElementById('logo');
+  logo.style.left = '11px';
+}
+
+function mode_switch1() {
+  let acc_center = document.getElementById('acc-center');
+  acc_center.style.border = '2px solid grey';
+  let a1 = document.getElementById('a1');
+  a1.style.border = '1px solid white';
+  let a2 = document.getElementById('a2');
+  a2.style.border = '1px solid white';
+  let a3 = document.getElementById('a3');
+  a3.style.border = '1px solid white';
+  let a4 = document.getElementById('a4');
+  a4.style.border = '1px solid white';
+
+  let mode_switch_container = document.getElementById('mode-switch-container');
+  mode_switch_container.style.border = '1px solid white';
+  mode_switch_container.setAttribute('onclick', 'mode_switch()');
+  let mode_switch = document.getElementById('mode-switch');
+  mode_switch.style.left = '118px';
+
+  let anim_switch_container = document.getElementById('anim-switch-container');
+  anim_switch_container.style.border = '1px solid white';
+
+  let anim_switch = document.getElementById('anim-switch');
+  let anim_switch_left = parseFloat(getComputedStyle(anim_switch).left);
+  if (anim_switch_left == 37) {
+    let fake_body = document.getElementById('fake-body');
+    fake_body.style.display = 'initial'
+    VANTA.FOG({
+      el: document.getElementById("fake-body"),
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      highlightColor: 0x6700ff,
+      midtoneColor: 0x0,
+      lowlightColor: 0x0,
+      baseColor: 0x0,
+      blurFactor: 0.6,
+      speed: 2,
+    });
+    body = document.getElementById('body');
+    body.style.background = 'rgb(36, 0, 88)';
+    anim_switch_container.setAttribute('onclick', 'anim_switch_1()');
+  } else {
+    body = document.getElementById('body');
+    body.style.background = 'rgb(36, 0, 88)';
+    anim_switch_container.setAttribute('onclick', 'anim_switch_dark()');
+  }
+
+  let logo = document.getElementById('logo');
+  logo.style.left = '10px';
 }
