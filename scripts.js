@@ -208,23 +208,23 @@ function menu_close() {
 
 function dum1m() {
   window.scrollTo({ top: 1080, behavior: "smooth" });
-  let x = document.getElementById('menu-container');
-  x.style.left = '-360px';
+  menu_close();
+  acc_close();
 }
 function dum2m() {
   window.scrollTo({ top: 2160, behavior: "smooth" });
-  let x = document.getElementById('menu-container');
-  x.style.left = '-360px';
+  menu_close();
+  acc_close();
 }
 function dum3m() {
   window.scrollTo({ top: 3240, behavior: "smooth" });
-  let x = document.getElementById('menu-container');
-  x.style.left = '-360px';
+  menu_close();
+  acc_close();
 }
 function dum4m() {
   window.scrollTo({ top: 4320, behavior: "smooth" });
-  let x = document.getElementById('menu-container');
-  x.style.left = '-360px';
+  menu_close();
+  acc_close();
 }
 
 function acc_open() {
@@ -327,6 +327,10 @@ function mode_switch() {
 
   let logo = document.getElementById('logo');
   logo.style.left = '11px';
+
+  let mode_ind = document.getElementById('mode-ind');
+  mode_ind.setAttribute('src', 'sun.png');
+  mode_ind.style.transform = 'translateY(1px) translateX(1px)';
 }
 
 function mode_switch1() {
@@ -380,4 +384,8 @@ function mode_switch1() {
 
   let logo = document.getElementById('logo');
   logo.style.left = '10px';
+
+  let mode_ind = document.getElementById('mode-ind');
+  mode_ind.setAttribute('src', 'moon.png');
+  mode_ind.style.transform = 'translateY(1px)';
 }
